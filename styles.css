@@ -1,0 +1,32 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    transition: all 1s;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+}
+
+#header {
+    background-color: #83c5be;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+    font-size: 30px;
+}
+
+#explicacao{
+    padding: 15px; 
+    align-items: center;
+    font-size: 20px;
+}
+
+#form-formulario {
+    padding: 15px; 
+    align-items: center;
+    font-size: 20px;
+    
+}
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Urbanist:wght@300&display=swap"
+        rel="stylesheet">
+    <title>IMC</title>
+</head>
+
+<body>
+    <header id="header">
+        <h2>Calculadora IMC</h2>
+        <img src="" alt="">
+    </header>
+
+    <main id="main">
+        <div id="explicacao">
+            <h3>Oque é o IMC?</h3>
+            <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para
+                calcular o peso ideal de cada pessoa.
+
+                O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao
+                quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.
+
+                Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da
+                tabela. Importante: siga os exemplos e use pontos como separadores.</p>
+        </div>
+        <div id="form-formulario">
+            <h3>Vamos calcular</h3>
+            <form action="" id="formulario">
+                <input type="text" name="peso" id="peso" placeholder="Informe seu peso">
+                <input type="text" name="altura" id="altura" placeholder="Informe sua altura">
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="texto"></p>
+        </div>
+        <p id="texto"></p>
+
+        <script>
+            var peso = document.getElementById("peso")
+            var altura = document.getElementById("altura")
+            var form = document.getElementById("formulario")
+            var texto = document.getElementById("texto")
+
+            function calcularIMC(event) {
+                event.preventDefault()
+                var imc = peso.value / (altura.value ** 2)
+
+                if (imc < 18.5) {
+                    texto.innerHTML = "Abaixo do peso, seu IMC é: " + imc.toFixed(2)
+                }
+                else if (imc >= 18.5 && imc <= 24.9) {
+                    texto.innerHTML = "Peso normal, seu IMC é: " + imc.toFixed(2)
+                }
+                else if (imc >= 25 && imc <= 29.9) {
+                    texto.innerHTML = "Sobrepeso, seu IMC é: " + imc.toFixed(2)
+                }
+                else if (imc >= 30 && imc <= 34.9) {
+                    texto.innerHTML = "Obesidade grau I, seu IMC é: " + imc.toFixed(2)
+                }
+                else if (imc >= 35 && imc <= 39.9) {
+                    texto.innerHTML = "Obesidade grau II, seu IMC é: " + imc.toFixed(2)
+                }
+                else if (imc >= 40.0) { texto.innerHTML = "Obesidade grau III, seu IMC é: " + imc.toFixed(2) }
+
+            }
+
+            form.addEventListener("submit", calcularIMC)
+
+
+        </script>
+
+    </main>
+
+</body>
+
+</html>
+</header>
+</body>
+
+</html>
